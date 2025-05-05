@@ -1,13 +1,12 @@
 # https://leetcode.com/problems/contains-duplicate/description/?envType=problem-list-v2&envId=oizxjoit
+from curses.ascii import SUB
 class Solution:
     def containsDuplicate(self, nums: list[int]) -> bool:
-        if len(nums) == len(set(nums)):
-            return False
-        else:
-            return True
+        pass
 
 """
-Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+Given an integer array nums, return true if any value appears at least twice in the array,
+and return false if every element is distinct.
 
 Example 1:
 
@@ -125,3 +124,7 @@ if __name__ == "__main__":
 
     if all_passed:
         print("\nAll passed!")
+        import sys
+        import os
+        import re
+        import subprocess

@@ -1,14 +1,9 @@
 # https://leetcode.com/problems/valid-anagram/submissions/1586983455/?envType=problem-list-v2&envId=oizxjoit
-
-from collections import Counter
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) == len(t): #If not length-wise , not correct.
-            if set(s) == set(t): #If not same letters, not correct:
-                if Counter(s) == Counter(t):
-                    return True
+        from collections import Counter
+        return Counter(s) == Counter(t)
 
-        return False
 
 """
 Given two strings s and t, return true if t is an

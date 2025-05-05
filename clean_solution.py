@@ -1,6 +1,4 @@
-import sys
 import os
-import re
 
 def clean_solution(file_path):
 
@@ -35,7 +33,7 @@ def clean_solution(file_path):
             if i == '"""\n':
                 q_index = n
             elif def_index > 0 and q_index > 0:
-                no_solution_lines = lines[:def_index+1] + ['pass\n\n'] + lines[q_index:]
+                no_solution_lines = lines[:def_index+1] + ['\t\tpass\n\n'] + lines[q_index:]
                 break
 
         # Write the cleaned content back to the file

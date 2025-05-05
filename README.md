@@ -54,7 +54,7 @@ Contributions are welcome! Please feel free to submit pull requests for bug fixe
 
 ## License
 
-[MIT Licencse](https://opensource.org/license/mit) - Do what you want with it.
+[MIT License](https://opensource.org/license/mit) - Do what you want with it.
 
 ---
 

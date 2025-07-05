@@ -11,23 +11,7 @@ class Solution:
 
 
     def decode(self, s: str) -> list[str]:
-        # Example: '4##lint4##code4##love3##you'
-
-        # Iterate through string
-        # If we find a number, we know that the next two characters will be "##"
-        # After ## we need "n" positions, and then append to res
-
-        res = []
-        for char in s:
-            if char.isdigit():
-                n = int(char)
-                res.append(s[s.index("##")+2:s.index("##")+2+n])
-                s = s[s.index("##")+2+n:]
-        return res
-
-        # return s.split(";:")
-
-
+		pass
 
 """
 659 · Encode and Decode Strings

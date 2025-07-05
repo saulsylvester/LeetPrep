@@ -1,18 +1,13 @@
 
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        # Create a dictionary to store the index of the numbers
-        num_dict = {}
-        for i, num in enumerate(nums):
-            # Check if the number required to reach the target is already in the dictionary
-            if target - num in num_dict:
-                # If it is, return the index of the number and the index of the number required to reach the target
-                return [num_dict[target - num], i]
-            # If not, store the index of the number in the dictionary
-            num_dict[num] = i
-
-        # If no solution is found, return an empty list
-        return []
+        seen = {}
+        for i, n in enumerate(nums):
+            diff = target - n
+            if diff in seen:
+                return [seen[diff], i]
+            seen[n] = i
+        return
 
 """
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.

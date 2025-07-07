@@ -123,20 +123,20 @@ if __name__ == "__main__":
 
     if all_passed:
         print("\nAll passed!")
-        import sys
-        import os
-        import re
-        import subprocess
+    #     import sys
+    #     import os
+    #     import re
+    #     import subprocess
 
-        current_file_path = os.path.abspath(__file__)
+    #     current_file_path = os.path.abspath(__file__)
 
-        cleaner_script_dir = os.path.dirname(os.path.dirname(__file__))
-        cleaner_script_path = os.path.join(cleaner_script_dir, 'clean_solution.py')
-        command = [sys.executable, cleaner_script_path, current_file_path]
+    #     cleaner_script_dir = os.path.dirname(os.path.dirname(__file__))
+    #     cleaner_script_path = os.path.join(cleaner_script_dir, 'clean_solution.py')
+    #     command = [sys.executable, cleaner_script_path, current_file_path]
 
-        result = subprocess.run(command, capture_output=True, text=True, check=True)
-        print("Cleaning script output:")
-        print(result.stdout)
-        if result.stderr:
-             print("Cleaning script errors:")
-             print(result.stderr)
+    #     result = subprocess.run(command, capture_output=True, text=True, check=True)
+    #     print("Cleaning script output:")
+    #     print(result.stdout)
+    #     if result.stderr:
+    #          print("Cleaning script errors:")
+    #          print(result.stderr)

@@ -1,5 +1,7 @@
+# https://leetcode.com/problems/top-k-frequent-elements/description/
+
+from typing import List
 class Solution:
-    from typing import List
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 		pass
 

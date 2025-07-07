@@ -1,4 +1,5 @@
 import os
+from typing_extensions import overload
 
 def clean_solution(file_path):
 
@@ -46,3 +47,7 @@ def clean_solution(file_path):
 
     except Exception as e:
         print(f"An error occurred during file cleaning: {e}")
+
+
+dir_ = "0_arrays/"
+# [clean_solution(f"{dir_}/{file}") for file in os.listdir(dir_) if "py" in file]

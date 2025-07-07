@@ -1,4 +1,4 @@
-
+# https://leetcode.com/problems/two-sum/?envType=problem-list-v2&envId=oizxjoit
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         seen = {}
@@ -7,7 +7,6 @@ class Solution:
             if diff in seen:
                 return [seen[diff], i]
             seen[n] = i
-        return
 
 """
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -15,8 +14,6 @@ Given an array of integers nums and an integer target, return indices of the two
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
 You can return the answer in any order.
-
-
 
 Example 1:
 

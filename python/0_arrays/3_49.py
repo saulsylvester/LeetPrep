@@ -1,22 +1,16 @@
 # https://leetcode.com/problems/group-anagrams/description/?envType=problem-list-v2&envId=oizxjoit
 class Solution:
     def groupAnagrams(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: List[List[str]]
-        """
-        hmap = {}
-        for s in strs:
-            s_list = list(s)
+        seen = {}
+        for str in strs:
+            s_list = list(str)
             s_list.sort()
-            s_order = "".join(s_list)
-            if s_order not in hmap.keys():
-                s_order = "".join(s_list)
-                hmap[s_order] = [s]
+            s_list_str = "".join(s_list)
+            if s_list_str in seen.keys():
+                seen[s_list_str] = seen[s_list_str] + [str]
             else:
-                hmap[s_order] = hmap[s_order] + [s]
-        return list(hmap.values())
-
+                seen[s_list_str] = [str]
+        return list(seen.values())
 
 """
 Given an array of strings strs, group the anagrams together. You can return the answer in any order.

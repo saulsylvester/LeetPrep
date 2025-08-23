@@ -12,20 +12,41 @@ class solution_0_14 {
         return prefix;
     }
 
-    // tests
-    public static void main(String[] args) {
+    // Testing
+    public static boolean check(String[] strs, String expected) {
         solution_0_14 solution = new solution_0_14();
-        System.out.println(
-            solution.longestCommonPrefix(
-                new String[] { "flower", "flow", "flight" }
-            )
+        String result = solution.longestCommonPrefix(strs);
+        return (
+            (expected == null && result == null) ||
+            (expected != null && expected.equals(result))
         );
-        System.out.println(
-            solution.longestCommonPrefix(
-                new String[] { "dog", "racecar", "car" }
-            )
-        ); // ""
-        System.out.println(solution.longestCommonPrefix(new String[] {})); // ""
-        System.out.println(solution.longestCommonPrefix(null));
+    }
+
+    public static void main(String[] args) {
+        boolean[] results = {
+            check(new String[] { "flower", "flow", "flight" }, "fl"),
+            check(new String[] { "dog", "racecar", "car" }, ""),
+            check(new String[] {}, ""),
+            check(null, ""),
+            check(new String[] { "alone" }, "alone"),
+            check(new String[] { "test", "test", "test" }, "test"),
+            check(new String[] { "abc", "ab", "" }, ""),
+        };
+
+        boolean allPassed = true;
+        StringBuilder summary = new StringBuilder();
+        for (boolean passed : results) {
+            if (passed) summary.append(".");
+            else {
+                summary.append("F");
+                allPassed = false;
+            }
+        }
+
+        if (!allPassed) {
+            System.out.println("Failed tests: " + summary.toString());
+        } else {
+            System.out.println(summary.toString() + "\nAll tests passed!");
+        }
     }
 }
